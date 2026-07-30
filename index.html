@@ -23,7 +23,6 @@
         }
         body.modal-open { overflow: hidden; }
 
-        /* ===== نفس خلفية لوحة التحكم (الخال) ===== */
         .admin-bg {
             position: fixed;
             top: 0;
@@ -83,7 +82,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* ===== نفس تصميم البطاقات من لوحة التحكم (الخال) ===== */
         .card {
             position: relative;
             z-index: 20;
@@ -97,7 +95,6 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.02);
         }
 
-        /* ===== نفس الهيدر من لوحة التحكم (الخال) ===== */
         .hero { text-align: center; margin-bottom: 24px; }
         .logo-animation { display: flex; justify-content: center; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
         .logo-icon { 
@@ -137,7 +134,6 @@
         }
         .glow-badge i { color: #F59E0B; font-size: 14px; }
 
-        /* ===== نفس الفورم من لوحة التحكم (الخال) ===== */
         .form-group { margin-bottom: 16px; text-align: right; }
         .form-group label { font-size: 13px; font-weight: 700; color: #F59E0B; margin-bottom: 6px; display: block; }
         .form-group label .required { color: #F87171; }
@@ -179,7 +175,6 @@
         .error-msg { color: #F87171; font-size: 11px; margin-top: 4px; display: none; font-weight: 600; }
         .error-msg.show { display: block; }
 
-        /* ===== نفس الأزرار من لوحة التحكم (الخال) ===== */
         .btn-premium { 
             width: 100%; padding: 14px; 
             background: linear-gradient(135deg, #F59E0B, #D97706); 
@@ -211,7 +206,6 @@
         .btn-premium.loading .btn-text { display: none; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ===== الفوتر ===== */
         .form-footnote {
             text-align: center;
             margin-top: 25px;
@@ -225,20 +219,6 @@
             margin: 0 4px;
         }
 
-        /* ===== تحميل الشعب ===== */
-        .sections-loading {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid rgba(245, 158, 11, 0.12);
-            border-top-color: #F59E0B;
-            border-radius: 50%;
-            animation: spin 0.6s linear infinite;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-
-        /* ===== نفس المودال من لوحة التحكم (الخال) ===== */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -324,7 +304,6 @@
             border-color: rgba(245, 158, 11, 0.12); 
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (min-width: 768px) { 
             .card { padding: 32px 36px 36px; } 
             .logo-icon { width: 70px; height: 70px; font-size: 36px; } 
@@ -347,7 +326,6 @@
 </head>
 <body>
 
-    <!-- ===== خلفية متحركة ===== -->
     <div class="admin-bg"></div>
     <div class="animated-bg">
         <div class="bg-gradient"></div>
@@ -357,7 +335,6 @@
         <div class="gold-ring ring3"></div>
     </div>
 
-    <!-- ===== البطاقة الرئيسية ===== -->
     <div class="card">
         <div class="hero">
             <div class="logo-animation">
@@ -371,7 +348,6 @@
         </div>
 
         <form id="bookingForm">
-            <!-- 1. الاسم المسجل على التلجرام -->
             <div class="form-group">
                 <label>اسمك المسجل كما هو على التلجرام <span class="required">*</span></label>
                 <div class="input-wrapper">
@@ -381,7 +357,6 @@
                 <div class="error-msg" id="telegramNameError"></div>
             </div>
 
-            <!-- 2. رقم الواتس اب -->
             <div class="form-group">
                 <label>رقم الواتس اب الخاص بك <span class="required">*</span></label>
                 <div class="input-wrapper">
@@ -391,7 +366,6 @@
                 <div class="error-msg" id="whatsappNumberError"></div>
             </div>
 
-            <!-- 3. الشعبة (قائمة منسدلة من Firebase) -->
             <div class="form-group">
                 <label>الشعبة <span class="required">*</span></label>
                 <div class="input-wrapper">
@@ -416,7 +390,6 @@
         </div>
     </div>
 
-    <!-- ===== مودال النجاح ===== -->
     <div class="modal-overlay" id="successModal">
         <div class="modal-content">
             <div class="success-icon"><i class="fas fa-check-circle"></i></div>
@@ -429,19 +402,83 @@
         </div>
     </div>
 
-    <!-- ===== Firebase ===== -->
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <script>
-        // ===== نفس إعدادات Firebase من لوحة التحكم (الخال) =====
+        // ===== إعدادات Firebase الجديدة (الخال) =====
         const firebaseConfig = {
-            apiKey: "AIzaSyDrhyNCKO5tzF-tiRQevk12kLM8hAkkr0w",
-            authDomain: "reservations-e411a.firebaseapp.com",
-            projectId: "reservations-e411a",
-            storageBucket: "reservations-e411a.appspot.com"
+            apiKey: "AIzaSyCmAh8TPjipQBHVV0Y6PRaeJjcy1HAjLEs",
+            authDomain: "alkhal-e4e90.firebaseapp.com",
+            projectId: "alkhal-e4e90",
+            storageBucket: "alkhal-e4e90.firebasestorage.app",
+            messagingSenderId: "737757411630",
+            appId: "1:737757411630:web:dd40edc5fb533d8f37e2bf",
+            measurementId: "G-4T73SZ5GY9"
         };
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
+
+        // ===== الحصول على رقم واتساب الموقع من الإعدادات (من localStorage) =====
+        function getSiteWhatsApp() {
+            try {
+                const settings = localStorage.getItem('siteSettings');
+                if (settings) {
+                    const parsed = JSON.parse(settings);
+                    let number = parsed.whatsapp || '201282235324';
+                    number = number.replace(/[\s\+\-\(\)]/g, '');
+                    if (number.startsWith('0')) {
+                        number = '20' + number.substring(1);
+                    } else if (!number.startsWith('20') && !number.startsWith('+')) {
+                        number = '20' + number;
+                    }
+                    return number;
+                }
+            } catch (e) {}
+            return '201282235324';
+        }
+
+        // ===== تحميل الشعب من Firebase (من مجموعة exam_sections) =====
+        async function loadSections() {
+            try {
+                const sectionsSnapshot = await db.collection('exam_sections').orderBy('name', 'asc').get();
+                const select = document.getElementById('sectionSelect');
+                
+                if (!sectionsSnapshot.empty) {
+                    select.innerHTML = '<option value="">اختر الشعبة...</option>';
+                    
+                    sectionsSnapshot.forEach(doc => {
+                        const data = doc.data();
+                        const option = document.createElement('option');
+                        option.value = data.name || doc.id;
+                        option.textContent = data.name || doc.id;
+                        select.appendChild(option);
+                    });
+                } else {
+                    // إذا لم توجد شعب في Firebase، نعرض رسالة
+                    select.innerHTML = `
+                        <option value="">لا توجد شعب متاحة</option>
+                    `;
+                    // محاولة إضافة شعب افتراضية كحل احتياطي
+                    const defaultSections = ['علمي رياضة', 'علمي علوم', 'أدبي'];
+                    defaultSections.forEach(section => {
+                        const option = document.createElement('option');
+                        option.value = section;
+                        option.textContent = '📚 ' + section;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('خطأ في تحميل الشعب:', error);
+                // في حالة الخطأ، نضيف خيارات افتراضية
+                const select = document.getElementById('sectionSelect');
+                select.innerHTML = `
+                    <option value="">اختر الشعبة...</option>
+                    <option value="علمي رياضة">📐 علمي رياضة</option>
+                    <option value="علمي علوم">🔬 علمي علوم</option>
+                    <option value="أدبي">📖 أدبي</option>
+                `;
+            }
+        }
 
         // ===== عناصر الصفحة =====
         const form = document.getElementById('bookingForm');
@@ -458,63 +495,6 @@
         const nameErr = document.getElementById('telegramNameError');
         const waErr = document.getElementById('whatsappNumberError');
         const sectionErr = document.getElementById('sectionError');
-
-        // ===== الحصول على رقم واتساب الموقع من الإعدادات (من localStorage) =====
-        function getSiteWhatsApp() {
-            try {
-                const settings = localStorage.getItem('siteSettings');
-                if (settings) {
-                    const parsed = JSON.parse(settings);
-                    // إزالة أي أصفار أو علامات من الرقم
-                    let number = parsed.whatsapp || '201282235324';
-                    // إزالة أي مسافات أو علامات +
-                    number = number.replace(/[\s\+\-\(\)]/g, '');
-                    // التأكد من أن الرقم يبدأ بـ 20 (مصر)
-                    if (number.startsWith('0')) {
-                        number = '20' + number.substring(1);
-                    } else if (!number.startsWith('20')) {
-                        number = '20' + number;
-                    }
-                    return number;
-                }
-            } catch (e) {}
-            return '201282235324';
-        }
-
-        // ===== تحميل الشعب من Firebase =====
-        async function loadSections() {
-            try {
-                const sectionsSnapshot = await db.collection('exam_sections').orderBy('name', 'asc').get();
-                
-                if (!sectionsSnapshot.empty) {
-                    sectionSelect.innerHTML = '<option value="">اختر الشعبة...</option>';
-                    
-                    sectionsSnapshot.forEach(doc => {
-                        const data = doc.data();
-                        const option = document.createElement('option');
-                        option.value = data.name || doc.id;
-                        option.textContent = data.name || doc.id;
-                        sectionSelect.appendChild(option);
-                    });
-                } else {
-                    // إذا لم توجد شعب، نضيف بعض الخيارات الافتراضية
-                    sectionSelect.innerHTML = `
-                        <option value="">اختر الشعبة...</option>
-                        <option value="علمي رياضة">📐 علمي رياضة</option>
-                        <option value="علمي علوم">🔬 علمي علوم</option>
-                        <option value="أدبي">📖 أدبي</option>
-                    `;
-                }
-            } catch (error) {
-                console.error('خطأ في تحميل الشعب:', error);
-                sectionSelect.innerHTML = `
-                    <option value="">اختر الشعبة...</option>
-                    <option value="علمي رياضة">📐 علمي رياضة</option>
-                    <option value="علمي علوم">🔬 علمي علوم</option>
-                    <option value="أدبي">📖 أدبي</option>
-                `;
-            }
-        }
 
         // ===== تحميل الشعب عند تحميل الصفحة =====
         loadSections();
@@ -535,9 +515,7 @@
 
         function openSuccessModal(waMsg) {
             const waNumber = getSiteWhatsApp();
-            // التأكد من أن الرقم صحيح
             if (waNumber.startsWith('0')) {
-                // إذا بدأ بصفر نضيف 20
                 whatsappBtn.href = 'https://wa.me/20' + waNumber.substring(1) + '?text=' + encodeURIComponent(waMsg);
             } else if (!waNumber.startsWith('20') && !waNumber.startsWith('+')) {
                 whatsappBtn.href = 'https://wa.me/20' + waNumber + '?text=' + encodeURIComponent(waMsg);
@@ -560,7 +538,6 @@
             e.preventDefault();
             if (submitting) return;
 
-            // إعادة تعيين الأخطاء
             [nameErr, waErr, sectionErr].forEach(el => el.classList.remove('show'));
 
             const name = telegramName.value.trim();
@@ -643,10 +620,9 @@
             if (sectionSelect.value) clearError(sectionErr);
         });
 
-        // ===== الاستماع لتغييرات الإعدادات (لو تغيرت من مكان آخر) =====
+        // ===== الاستماع لتغييرات الإعدادات =====
         window.addEventListener('storage', function(e) {
             if (e.key === 'siteSettings') {
-                // تحديث رقم الواتساب في المودال عند فتحه لاحقاً
                 // سيتم استخدام الرقم الجديد عند فتح المودال
             }
         });
